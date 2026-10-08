@@ -209,6 +209,8 @@ namespace OpenVinoSharp.GenAI
                             return GenAINativeMethods.ov_genai_vlm_pipeline_create(modelPtr, devicePtr, argCount, ref _ptr, propertyPtrs[0], propertyPtrs[1], propertyPtrs[2], propertyPtrs[3]);
                         case 6:
                             return GenAINativeMethods.ov_genai_vlm_pipeline_create(modelPtr, devicePtr, argCount, ref _ptr, propertyPtrs[0], propertyPtrs[1], propertyPtrs[2], propertyPtrs[3], propertyPtrs[4], propertyPtrs[5]);
+                        case 8:
+                            return GenAINativeMethods.ov_genai_vlm_pipeline_create(modelPtr, devicePtr, argCount, ref _ptr, propertyPtrs[0], propertyPtrs[1], propertyPtrs[2], propertyPtrs[3], propertyPtrs[4], propertyPtrs[5], propertyPtrs[6], propertyPtrs[7]);
                         default:
                             throw new ArgumentException("Only 0, 1, 2, or 3 property pairs are supported. / 当前仅支持 0、1、2、3 组属性。", nameof(properties));
                     }
@@ -357,8 +359,8 @@ namespace OpenVinoSharp.GenAI
         {
             if (properties == null || properties.Count == 0)
                 return new IntPtr[0];
-            if (properties.Count > 3)
-                throw new ArgumentException("Only 0, 1, 2, or 3 property pairs are supported. / 当前仅支持 0、1、2、3 组属性。", nameof(properties));
+            if (properties.Count > 4)
+                throw new ArgumentException("Only 0, 1, 2, 3, or 4 property pairs are supported. / 当前仅支持 0、1、2、3、4 组属性。", nameof(properties));
 
             IntPtr[] pointers = new IntPtr[properties.Count * 2];
             int index = 0;

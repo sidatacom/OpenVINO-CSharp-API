@@ -457,6 +457,9 @@ namespace OpenVinoSharp.native
         [DllImport(GenAILibrary, EntryPoint = "ov_genai_vlm_pipeline_create", CallingConvention = CallingConvention.Cdecl)]
         internal static extern ExceptionStatus ov_genai_vlm_pipeline_create(IntPtr models_path, IntPtr device, UIntPtr property_args_size, ref IntPtr pipe, IntPtr key0, IntPtr value0, IntPtr key1, IntPtr value1, IntPtr key2, IntPtr value2);
 
+        [DllImport(GenAILibrary, EntryPoint = "ov_genai_vlm_pipeline_create", CallingConvention = CallingConvention.Cdecl)]
+        internal static extern ExceptionStatus ov_genai_vlm_pipeline_create(IntPtr models_path, IntPtr device, UIntPtr property_args_size, ref IntPtr pipe, IntPtr key0, IntPtr value0, IntPtr key1, IntPtr value1, IntPtr key2, IntPtr value2, IntPtr key3, IntPtr value3);
+
         [DllImport(GenAILibrary, EntryPoint = "ov_genai_vlm_pipeline_free", CallingConvention = CallingConvention.Cdecl)]
         internal static extern void ov_genai_vlm_pipeline_free(IntPtr pipe);
 
